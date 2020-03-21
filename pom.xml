@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>def.drf.cucumber.demo</groupId>
+    <artifactId>cucumber-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>13</java.version>
+        <java.enable.preview>--enable-preview</java.enable.preview>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <org.jetbrains.annotations.version>16.0.3</org.jetbrains.annotations.version>
+
+        <!-- TEST -->
+        <junit.version>4.12</junit.version>
+        <mockito.version>1.10.19</mockito.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${org.jetbrains.annotations.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- TEST -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                    <compilerArgs>${java.enable.preview}</compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>${java.enable.preview}</argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
