@@ -19,6 +19,9 @@
         <!-- TEST -->
         <junit.version>4.12</junit.version>
         <mockito.version>1.10.19</mockito.version>
+
+        <!-- cucumber -->
+        <cucumber.version>5.7.0</cucumber.version>
     </properties>
 
     <dependencies>
@@ -42,6 +45,26 @@
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- cucumber -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
