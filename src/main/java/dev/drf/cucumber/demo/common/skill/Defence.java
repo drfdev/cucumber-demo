@@ -5,6 +5,9 @@ public class Defence {
     private Integer defence;
     private Float percent;
 
+    public Defence() {
+    }
+
     public String getName() {
         return name;
     }

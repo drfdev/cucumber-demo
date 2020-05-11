@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class DefinedSteps {
 
     @Дано("^Создать покемона с перечисленными параметрами$")
-    public void createPokemon(Map<String, String> values) {
+    public void createPokemon(Map<String, String> values) throws Exception {
         Pokemon pokemon = PokemonBuilderUtil.buildFrom(values);
         Storage.saveToStorage(pokemon);
     }

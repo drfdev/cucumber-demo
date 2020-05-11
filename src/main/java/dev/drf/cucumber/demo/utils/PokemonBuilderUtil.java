@@ -8,8 +8,8 @@ public final class PokemonBuilderUtil {
     private PokemonBuilderUtil() {
     }
 
-    public static Pokemon buildFrom(Map<String, String> values) {
-        // TODO
-        return new Pokemon();
+    public static Pokemon buildFrom(Map<String, String> values) throws Exception {
+        ObjectBuilder<Pokemon> objectBuilder = ObjectBuilder.of(Pokemon.class);
+        return objectBuilder.build(values);
     }
 }

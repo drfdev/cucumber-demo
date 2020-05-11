@@ -16,6 +16,9 @@ public class Pokemon {
     private List<Bonus> bonuses;
     private List<Defence> defences;
 
+    public Pokemon() {
+    }
+
     public Long getId() {
         return id;
     }

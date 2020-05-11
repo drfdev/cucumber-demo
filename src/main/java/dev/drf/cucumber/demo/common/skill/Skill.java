@@ -7,6 +7,9 @@ public class Skill {
     private Integer power;
     private Float volume;
 
+    public Skill() {
+    }
+
     public String getName() {
         return name;
     }

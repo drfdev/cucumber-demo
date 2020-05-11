@@ -5,6 +5,9 @@ public class Bonus {
     private Effect effect;
     private Integer value;
 
+    public Bonus() {
+    }
+
     public String getName() {
         return name;
     }
